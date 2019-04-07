@@ -36,6 +36,14 @@ def palinedrome(list_):
         print('Not palinedrome')
 
 
+def countvowels(lists_):
+    count = 0
+    for i in range(0, len(lists_)):
+        if lists_[i] in ['a', 'u', 'e', 'i', 'o']:
+            count +=1
+    return count
+
+
 def main():
     funct1()
     squaring(2)
@@ -45,8 +53,10 @@ def main():
     # arrays = np.array(arrays)
     # print(arrays)
     arrays = np.array([1, 2, 3, 4, 5])
-    print('largest element {0} is '.format(np.amax(arrays)))
-    palinedrome('abcxcba')
+    print('largest element is {0} is '.format(np.amax(arrays)))
+    lists_= input('Enter a string: ')
+    palinedrome(lists_)
+    print('number of vowels in {0} is {1}'.format((lists_),countvowels(lists_)))
 
 
 if __name__ == "__main__":
