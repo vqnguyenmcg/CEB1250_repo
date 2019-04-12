@@ -2,7 +2,7 @@ import numpy as np
 
 
 
-def funct1():
+def check_odd_even():
     number = int(input('Enter a number: '))
     if number % 2 == 0:
         print('Even number')
@@ -45,7 +45,7 @@ def countvowels(lists_):
 
 
 def main():
-    funct1()
+    check_odd_even()
     squaring(2)
     convertftoc()
     # arrays = input('Enter a sequence of numbers separated by a space: ')
