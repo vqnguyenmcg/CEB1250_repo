@@ -1,0 +1,31 @@
+Weekly Report: Week 1
+
+Name: Van Quang Nguyen
+
+The first week was devoted to introduce the content of the course as 
+well as evaluation method. There were two import keys in this week's lectures:
+
+1. Introduction to distributed storing systems, in particular, Hadoop. 
+According to my knowledge, the main difference to the classical storage 
+systems is that data is divided and replicated to be stored in many nodes 
+and hence, if in some cases, some nodes are broken, the data is still 
+accessed from the other nodes. Data nodes are under the observation of 
+a name node which stores address of all data nodes. Because of its importance, 
+there must be a back up of the name node.
+
+2. Over all review of GIT, Docker, Bash, and Python with some exercises 
+in coding simple examples with Python.
+
+
+The instructor showed his listening to all our questions and give his 
+explanations. I still found some not very clear (at least to me) explanation, 
+but maybe because of my English. The group discussions for some questions 
+were interesting and useful.
+
+For the next courses, I am looking forward to learning on details about 
+distributed storing systems such as Hadoop, specifically: (i) How useful 
+is it? (ii) How to use it to manage large data sets? and (iii) How to 
+incorporate with Python or other elements we learned such as Docker.
+
+
+
