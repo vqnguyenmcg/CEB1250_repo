@@ -1,0 +1,51 @@
+Week 2's exercises in class:
+
+Name: Van Quang Nguyen
+
+Question 1. 
+i) dept_emp:
+ 
+	emp_no: integer of length 11
+	dept_no: string of length 4
+	from_date, to_date: Date
+	Primary keys: emp_no, dept_no
+	Foreign keys: dept_no, emp_no
+
+(ii) departments:
+
+	dept_no: string of length 4
+	dept_name: string of lenght 40
+	PK: 
+
+Question 2: Create tables:
+
+create table course (
+
+    -> course_id integer primary key,
+
+    -> course_name varchar(50) not null,
+
+    -> course_description varchar(100) not null);
+
+alter table course 
+	add course_day varchar(50);
+
+
+Question 3. Some querries:
+
+1. Return salaries between 40000 and 60000:
+
+select * from salaries  where salary between 40000 and 60000;
+
+2. Return employees hired after 01-01-1995:
+
+select * from employees where hire_date >= '01-01-1995';
+
+3. Return salaries from 60000 to 90000:
+
+select * from salaries where salary between 60000 and 90000;
+
+4. Return titles where title is engineer:
+
+select * from titles where title = 'engineer';
+
