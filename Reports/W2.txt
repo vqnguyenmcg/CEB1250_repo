@@ -4,48 +4,105 @@ Name: Van Quang Nguyen
 
 Question 1. 
 i) dept_emp:
- 
 	emp_no: integer of length 11
 	dept_no: string of length 4
 	from_date, to_date: Date
-	Primary keys: emp_no, dept_no
-	Foreign keys: dept_no, emp_no
-
+	PK: emp_no, dept_no
+	FK: no
 (ii) departments:
-
 	dept_no: string of length 4
 	dept_name: string of lenght 40
-	PK: 
+	PK: dept_name
+	FK: dept_no
+(iii) dept_manager:
+	dept_no: string of length 4
+	empt_no interger of length 11
+	from_date, to_date: Date
+	PK: dept_no, empt_no
+	FK: ns
+(iv) employees:
+	empt_no: integer of length 11
+	birth_date, hire_date: Date
+	first_name, last_name: string of length 14 and 16
+	gender: enumrated
+	PK, FK: empt_no
+(v) titles:
+	emp_no: integer of lenth 11
+	title: string of length 50
+	from_date, to_date: Date
+	PK, FK: no
+(vi) Salaries:
+	emp_no: integer of length 11
+	salary: integer of lenth 11
+	from_date, to_date: Date
+	PK: emp_no,
+	FK: no
 
 Question 2: Create tables:
 
 create table course (
-
     -> course_id integer primary key,
-
     -> course_name varchar(50) not null,
-
     -> course_description varchar(100) not null);
 
-alter table course 
-	add course_day varchar(50);
+alter table course add course_day varchar(50);
 
 
-Question 3. Some querries:
+Question 3. Some querries (I printed 5 records):
 
 1. Return salaries between 40000 and 60000:
 
 select * from salaries  where salary between 40000 and 60000;
++--------+--------+------------+------------+
+| emp_no | salary | from_date  | to_date    |
++--------+--------+------------+------------+
+|  10003 |  40006 | 1995-12-03 | 1996-12-02 |
+|  10003 |  43616 | 1996-12-02 | 1997-12-02 |
+|  10003 |  43466 | 1997-12-02 | 1998-12-02 |
+|  10003 |  43636 | 1998-12-02 | 1999-12-02 |
+|  10003 |  43478 | 1999-12-02 | 2000-12-01 |
++--------+--------+------------+------------+
 
 2. Return employees hired after 01-01-1995:
 
-select * from employees where hire_date >= '01-01-1995';
+select * from employees where hire_date >= '1995-01-01';
+
++--------+------------+------------+-------------+--------+------------+
+| emp_no | birth_date | first_name | last_name   | gender | hire_date  |
++--------+------------+------------+-------------+--------+------------+
+|  10016 | 1961-05-02 | Kazuhito   | Cappelletti | M      | 1995-01-27 |
+|  10019 | 1953-01-23 | Lillian    | Haddadi     | M      | 1999-04-30 |
+|  10022 | 1952-07-08 | Shahaf     | Famili      | M      | 1995-08-22 |
+|  10024 | 1958-09-05 | Suzette    | Pettey      | F      | 1997-05-19 |
+|  10026 | 1953-04-03 | Yongqiao   | Berztiss    | M      | 1995-03-20 |
++--------+------------+------------+-------------+--------+------------+
 
 3. Return salaries from 60000 to 90000:
 
 select * from salaries where salary between 60000 and 90000;
 
++--------+--------+------------+------------+
+| emp_no | salary | from_date  | to_date    |
++--------+--------+------------+------------+
+|  10001 |  60117 | 1986-06-26 | 1987-06-26 |
+|  10001 |  62102 | 1987-06-26 | 1988-06-25 |
+|  10001 |  66074 | 1988-06-25 | 1989-06-25 |
+|  10001 |  66596 | 1989-06-25 | 1990-06-25 |
+|  10001 |  66961 | 1990-06-25 | 1991-06-25 |
++--------+--------+------------+------------+
+
+
 4. Return titles where title is engineer:
 
 select * from titles where title = 'engineer';
+
++--------+----------+------------+------------+
+| emp_no | title    | from_date  | to_date    |
++--------+----------+------------+------------+
+|  10004 | Engineer | 1986-12-01 | 1995-12-01 |
+|  10009 | Engineer | 1990-02-18 | 1995-02-18 |
+|  10010 | Engineer | 1996-11-24 | 9999-01-01 |
+|  10012 | Engineer | 1992-12-18 | 2000-12-18 |
+|  10014 | Engineer | 1993-12-29 | 9999-01-01 |
++--------+----------+------------+------------+
 
