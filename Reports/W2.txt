@@ -106,3 +106,9 @@ select * from titles where title = 'engineer';
 |  10014 | Engineer | 1993-12-29 | 9999-01-01 |
 +--------+----------+------------+------------+
 
+Question 4. Third form nomalization: The entity has the following fields:
+Case (primary key), age, presecription, astigmatism, tear production, lens. 
+All fields depend on the primary field. There is no non-primary field depending 
+on other non-primary fields and hence, 
+this entity was in third normal form.
+
